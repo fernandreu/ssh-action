@@ -18,4 +18,4 @@ ssh-add "$SSH_PATH/deploy_key"
 
 ssh-keyscan -t rsa $HOST >> "$SSH_PATH/known_hosts"
 
-ssh -o StrictHostKeyChecking=no -o EnvVar="GITHUB_SHA" -A -tt -p ${PORT:-22} $USER@$HOST "$*"
+ssh -o StrictHostKeyChecking=no -o SenvVar="GITHUB_*" -A -tt -p ${PORT:-22} $USER@$HOST "$*"

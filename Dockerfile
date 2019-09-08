@@ -1,6 +1,6 @@
 FROM debian:stable-slim
 
-LABEL "maintainer"="maddox <jon@jonmaddox.com>"
+LABEL "maintainer"="Fernando Andreu"
 LABEL "repository"="https://github.com/fernandreu/ssh-action"
 LABEL "version"="0.1.0"
 
