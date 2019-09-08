@@ -3,6 +3,8 @@ Run full scripts via SSH in GitHub Action
 
 
 ## SSH Server Configuration
-To use any of the [predefined $GITHUB_* environment variables](https://help.github.com/en/articles/virtual-environments-for-github-actions#environment-variables),
-you will need to add the following line to /etc/ssh/sshd_config:
-AcceptEnv GITHUB_*
+This action will automatically send to the SSL server any environment variable that starts with `GITHUB_`, `INPUT_` or `CLIENT_`. To
+be able to use them from the SSL server, you will need to add the following line to /etc/ssh/sshd_config:
+AcceptEnv GITHUB_* INPUT_* CLIENT_*
+
+You will need restart the SSH server for changes to take effect.
